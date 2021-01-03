@@ -1,0 +1,7 @@
+<div *ngFor="let resultSource of resultSources" style="margin-top:20px">
+  <result-details [result]='resultSource._source'></result-details>
+</div>
+
+<h3>{{notice}}</h3>
+<button (click)="showNextPage()" *ngIf="haveNextPage" class="btn btn-primary">Next</button>
+<button (click)="redirectToSearchPage()" class="btn btn-secondary">Back to search</button>
